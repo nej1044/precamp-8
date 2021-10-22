@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <script>
+    // 끝말잇기
+    let word = '코드캠프';
+    let inputText = '';
+
+    function input() {
+      inputText = document.getElementById('endTalk__input').value;
+      document.getElementById('endTalk__input').value = '';
+
+      if (word[word.length - 1] === inputText[0]) {
+        document.querySelector('.endTalk__word').innerText = '제시어: ' + inputText
+        document.querySelector('.endTalk__result').innerText = '정답입니다.'
+        word = inputText;
+        inputText = '';
+      } else {
+        document.querySelector('.endTalk__result').innerText = '오답입니다.'
+      }
+    };
+    //로또
+    function lotto() {
+      let lottoArray = [];
+
+      for (let i = 0; lottoArray.length < 6; i++) {
+        const newNum = Math.floor((Math.random() * 45)) + 1
+        if(lottoArray.includes(newNum) !== true) {
+          lottoArray.push(newNum)
+        }
+      }
+  
+      document.getElementById('lotto__result').innerText = lottoArray[0] + ' ' + lottoArray[1] + ' ' + lottoArray[2] + ' ' + lottoArray[3] + ' ' + lottoArray[4] + ' ' + lottoArray[5]
+    }
+  </script>
+  <link rel="stylesheet" href="styles/game.css" />
+  <title>Game</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="game__header">
+      <span class="title">Game</span><span class="subTitle">TODAY CHOICE</span>
+      <hr />
+    </section>
+    <section id="endTalk" class="game">
+      <div class="endTalk__header">
+        <img class="endTalk__icon" src="images/endTalkIcon.png" alt="endTalkIcon">
+        <span class="game__title">끝말잇기<p class="endTalk__word">제시어: 코드캠프</p></span>
+      </div>
+      <form action="">
+        <input id="endTalk__input" type="text" placeholder="단어를 입력하세요." />
+        <input onclick="input()" id="endTalk__btn" type="button" value="검색" />
+      </form>
+      <p class="endTalk__result">결과 !</p>
+    </section>
+    <section id="lotto" class="game">
+      <div class="lotto__header">
+        <img class="lotto__icon" src="images/lottoIcon.png" alt="lottoIcon">
+        <span class="game__title">LOTTO</span>
+        <p>버튼을 누르세요.</p>
+      </div>
+      <div id="lotto__result"></div>
+      <button id="lotto__btn" onclick="lotto()">Button</button>
+    </section>
+  </div>
+</body>
+
+</html>

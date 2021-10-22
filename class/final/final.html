@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <link rel="stylesheet" href="final.css">
+  <script src="final.js"></script>
+  <title>회원 가입</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1 class="signup__header">코드캠프 회원가입</h1>
+    <section class="signup__body">
+      <div class="signup__form">
+        <input id="email" type="email" placeholder="이메일을 입력해 주세요.">
+        <p id="emailerror" class="errormessage">이메일이 올바르지 않습니다.</p>
+        <input id="name" type="text" placeholder="이름을 입력해 주세요.">
+        <p id="nameerror" class="errormessage">이름이 올바르지 않습니다.</p>
+        <input id="password1" type="password" placeholder="비밀번호를 입력해 주세요.">
+        <p id="password1error" class="errormessage">비밀번호를 입력해 주세요.</p>
+        <input id="password2" type="text" placeholder="비밀번호를 다시 입력해 주세요.">
+        <p id="password2error" class="errormessage">비밀번호를 입력해 주세요.</p>
+      </div>
+      <span class="phoneNumber">
+        <input oninput="changePhone1()" id="phone1" type="text" size="3" maxlength="3"> -
+        <input oninput="changePhone2()" id="phone2" type="text" size="4" maxlength="4"> -
+        <input oninput="changePhone3()" id="phone3" type="text" size="4" maxlength="4">
+      </span>
+      <span id="getToken">
+        <p id="tokenNumber">000000</p><button onclick="getToken()" id="getToken__btn" disabled="true">인증번호전송</button>
+      </span>
+      <span id="timer">
+        <p id="timeOut">03:00</p><button onclick="checkAuth()" id="timer__btn" disabled="true">인증확인</button>
+      </span>
+      <div id="adressWrapper">
+        <select id="adress">
+          <option selected disabled>지역을 선택하세요.</option>
+          <option>서울</option>
+          <option>인천</option>
+          <option>경기</option>
+        </select>
+        <p id="adresserror" class="errormessage">지역을 선택해 주세요.</p>
+      </div>
+      <div id="genderWrapper">
+        <div class="gender">
+          <span><input type="radio" name="gender" />여성</span> 
+          <span><input type="radio" name="gender" />남성</span> 
+        </div>
+        <p id="gendererror" class="errormessage">성별을 선택해 주세요.</p>
+      </div>
+      <div class="divider"></div>
+    </section>
+    <button onclick="validation()" id="signup__footer" disabled="true">가입하기</button>
+  </div>
+</body>
+
+</html>

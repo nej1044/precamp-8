@@ -1,0 +1,11 @@
+input {
+  background-color: yellow;
+}
+
+.password {
+  background-color: skyblue;
+}
+
+#re-password {
+  background-color: green;
+}

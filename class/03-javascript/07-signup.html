@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <script>
+    function validation() {
+      const email = document.getElementById('email').value
+      const password1 = document.getElementById('password1').value
+      const password2 = document.getElementById('password2').value
+      if (email !== '' && password1 !== '' && password2 !== '') {
+        document.getElementById('signup').setAttribute('style', 'background-color:yellow')
+      } else {
+        document.getElementById('signup').removeAttribute('style', 'bakground-color')
+      }
+    }
+  </script>
+  <title>이벤트 감지</title>
+</head>
+
+<body>
+  <input id="email" oninput="validation()" type="text" placeholder="이메일을 입력하세요." /> <br />
+  <input id="password1" oninput="validation()" type="password" placeholder="비밀번호를 입력하세요." /> <br />
+  <input id="password2" oninput="validation()" type="password" placeholder="비밀번호를 한 번 더 입력하세요."> <br />
+  <button id="signup">회원가입</button>
+</body>
+
+</html>

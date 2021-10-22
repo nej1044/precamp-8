@@ -1,0 +1,148 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.game__header {
+  width: 100%;
+  height: 25px;
+}
+
+.title {
+  color: #55B2D4;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.subTitle {
+  margin-left: 5px;
+  color: black;
+  font-size: 8px;
+  font-weight: normal;
+}
+
+.game__header hr {
+  margin: 8px 0;
+  border-top: 1px solid #999999;
+}
+
+.game {
+  display: flex;
+  width: 222px;
+  height: 168px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #F6F6F6;
+  border: 1px solid #999999;
+  border-radius: 10px;
+}
+
+.endTalk__header {
+  display: flex;
+  height: 60px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game__title {
+  color: black;
+  font-weight: bold;
+  font-size: 11px;
+  text-align: center;
+}
+
+.endTalk__word {
+  color: #999999;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.endTalk__body {
+  display: flex;
+  width: 180px;
+  height: 24px;
+  justify-content: space-between;
+}
+
+.game form input {
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+#endTalk__input {
+  width: 136px;
+  height: 24px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+#endTalk__btn {
+  width: 38px;
+  height: 24px;
+  background-color: white;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.endTalk__result {
+  color: #999999;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.lotto__header {
+  display: flex;
+  height: 60px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #999999;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+#lotto__result {
+  width: 130px;
+  height: 21px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: #FFE400;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.lotto__icon {
+  width: 26px;
+  height: 28px;
+}
+
+#lotto__btn {
+  width: 62px;
+  height: 24px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 11px;
+  font-weight: bold;
+}
